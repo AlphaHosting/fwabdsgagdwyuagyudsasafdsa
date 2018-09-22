@@ -28,7 +28,7 @@ j = 1;
        
   client.on('message', message => {
     if(message.content === '-ip')
-        const embed = new Discord.RichEmbed
+        var embed = new Discord.RichEmbed
         .setColor('RANDOM')
         .setFooter('FMGR STAFF')
         .setDescription('[FMGR [{FESMAROC GAMING ROLE PLAY افضل سيرفر للعب الادوار
