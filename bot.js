@@ -31,7 +31,7 @@ j = 1;
         var embed = new Discord.RichEmbed
         .setColor('RANDOM')
         .setFooter('FMGR STAFF')
-        .setDescription('[FMGR [{FESMAROC GAMING ROLE PLAY افضل سيرفر للعب الادوار
+        .addField('[FMGR [{FESMAROC GAMING ROLE PLAY افضل سيرفر للعب الادوار
 mtasa:'/'/'195.201.114.186:22031')
     message.channel.snedEmbed(embed)
   });
