@@ -122,7 +122,7 @@ client.on("message", function(message) {
     let toReason = message.content.split(" ").slice(2).join(" ");
     let toEmbed = new Discord.RichEmbed()
    if(message.content.startsWith(prefix + "ban")) {
-       if(!message.member.hasPermission("SEND_MESSAGE")) return message.reply("**# - يجب ان يكون لديك برمشن أداري  **");
+       if(!message.member.hasPermission("READ_MESSAGE")) return message.reply("**# - يجب ان يكون لديك برمشن أداري  **");
        if(!toBan) return message.reply("**# - يجب ان تقوم بمنشن شخص معين**");
        if(toBan.id === ("${client.user.id}")) return message.reply("** لا يمكنك أن تحظرني! **");
        if(toBan === message.member.guild.owner) return message.reply("** لا يمكنك حظر مالك السيرفر!**");
