@@ -5,7 +5,7 @@ const prefix = ('-');
 
 client.on('ready', function(){	
     var ms = 40000 ;	
-    var setGame =['Fes Maroc RP','http://fmgr.tk'];	
+    var setGame =['Fes Maroc RP','Hosting By HeroHost'];	
     var i = -1;	
     var j = 0;	
     setInterval(function (){	
@@ -95,7 +95,6 @@ client.on('message', message => {
   if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
   let args = message.content.split(' ').slice(1).join(' ');
-  let copy = "FMGR STAFF";
   let request = `Requested By ${message.author.username}`;
   if (!args) return message.reply('**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**');message.channel.send(`**هل أنت متأكد من إرسالك البرودكاست؟ \nمحتوى البرودكاست:** \` ${args}\``).then(msg => {
   
@@ -108,7 +107,7 @@ client.on('message', message => {
   .addField('Sender', message.author.username)
   .addField('Message', args)
   .setThumbnail(message.author.avatarURL)
-  .setFooter(copy, client.user.avatarURL);
+  .setFooter('Hosting By HeroHost');
   m.send({ embed: bc })
   msg.delete();
   })
@@ -138,6 +137,7 @@ client.on("message", function(message) {
        .addField("** # - السيرفر:**",message.guild.name,true)
        .addField("** # - السبب:**",toReason,true)
        .addField("** # - حظرت من قبل:**",message.author,true)
+       .setFooter('Hosting By HeroHost')
        if(message.member.hasPermission("BAN_MEMBERS")) return (
            toBan.sendMessage({embed: toEmbed}).then(() => message.guild.member(toBan).ban({reason: toReason})).then(() => message.channel.send(`**Done :white_check_mark: Banned  ${toBan}**`))
        );
@@ -200,6 +200,7 @@ client.on('message', async message => {
       .addField('# - السيرفر',message.guild.name,true)
       .addField('# - تم اعطائك ميوت بواسطة',message.author,true)
       .addField('# - السبب',reason)
+      .setFooter('Hosting By HeroHost')
    
       let role = message.guild.roles.find('name', 'Muted') || message.guild.roles.get(r => r.name === 'Muted');
       if(!role) try {
