@@ -107,7 +107,7 @@ client.on('message', message => {
   .addField('Sender', message.author.username)
   .addField('Message', args)
   .setThumbnail(message.author.avatarURL)
-  .setFooter('Hosting By HeroHost');
+  .setFooter('https://hero-host.com');
   m.send({ embed: bc })
   msg.delete();
   })
